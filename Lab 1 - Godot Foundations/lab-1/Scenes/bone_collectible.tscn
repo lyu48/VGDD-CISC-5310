@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bf42vps3m8j8x"]
+
+[ext_resource type="Script" uid="uid://ve8lhypms11e" path="res://Scripts/bone_collectible.gd" id="1_64dn7"]
+[ext_resource type="Texture2D" uid="uid://dmq8k3dct80xl" path="res://Assets/cartoon_bone.svg" id="1_tcyal"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3vav1"]
+size = Vector2(45.744034, 13.398916)
+
+[node name="Bone_Collectible" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_64dn7")
+
+[node name="CartoonBone" type="Sprite2D" parent="."]
+position = Vector2(42.22325, 22.874994)
+scale = Vector2(0.14017345, 0.14017344)
+texture = ExtResource("1_tcyal")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(41.803375, 22.876774)
+rotation = -0.20943952
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_3vav1")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

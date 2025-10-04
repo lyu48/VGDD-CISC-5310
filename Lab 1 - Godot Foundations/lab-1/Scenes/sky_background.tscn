@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://byrtnruin0av0"]
+
+[ext_resource type="Texture2D" uid="uid://dp78bm2g02lve" path="res://Assets/sky_background.jpg" id="1_orr55"]
+
+[node name="Sky" type="Node2D"]
+
+[node name="SkyBackground" type="Sprite2D" parent="."]
+position = Vector2(970.44434, 539.5)
+scale = Vector2(2.5300932, 2.5300927)
+texture = ExtResource("1_orr55")

@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=3 uid="uid://ceng5l5etslv7"]
+
+[ext_resource type="Texture2D" uid="uid://c2eup1wyd16sw" path="res://Assets/ground.png" id="1_t7tip"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_688p1"]
+size = Vector2(2137, 75)
+
+[node name="Ground" type="StaticBody2D"]
+
+[node name="Ground" type="TextureRect" parent="."]
+offset_right = 360.0
+offset_bottom = 137.0
+texture = ExtResource("1_t7tip")
+
+[node name="Ground2" type="TextureRect" parent="Ground"]
+layout_mode = 0
+offset_left = 359.0
+offset_right = 719.0
+offset_bottom = 137.0
+texture = ExtResource("1_t7tip")
+flip_h = true
+
+[node name="Ground3" type="TextureRect" parent="Ground"]
+layout_mode = 0
+offset_left = 718.0
+offset_right = 1078.0
+offset_bottom = 137.0
+texture = ExtResource("1_t7tip")
+
+[node name="Ground4" type="TextureRect" parent="Ground"]
+layout_mode = 0
+offset_left = 1077.0
+offset_right = 1437.0
+offset_bottom = 137.0
+texture = ExtResource("1_t7tip")
+flip_h = true
+
+[node name="Ground5" type="TextureRect" parent="Ground"]
+layout_mode = 0
+offset_left = 1437.0
+offset_right = 1797.0
+offset_bottom = 137.0
+texture = ExtResource("1_t7tip")
+
+[node name="Ground6" type="TextureRect" parent="Ground"]
+layout_mode = 0
+offset_left = 1795.0
+offset_right = 2155.0
+offset_bottom = 137.0
+texture = ExtResource("1_t7tip")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1077.5, 75.5)
+shape = SubResource("RectangleShape2D_688p1")
