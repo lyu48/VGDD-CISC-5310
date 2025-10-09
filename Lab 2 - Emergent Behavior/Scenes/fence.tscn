@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://be7mhb6fsyqqp"]
+
+[ext_resource type="Texture2D" uid="uid://bjl1pgyh5ighf" path="res://Assets/favpng_fence.png" id="1_on2qe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_on2qe"]
+size = Vector2(305, 82)
+
+[node name="Fence" type="StaticBody2D"]
+
+[node name="Fence Sprite" type="Sprite2D" parent="."]
+position = Vector2(26.35157, 7.249996)
+scale = Vector2(0.3015625, 0.3015625)
+texture = ExtResource("1_on2qe")
+region_enabled = true
+region_rect = Rect2(169, 165.625, 1050.75, 320.625)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(26.5, 7)
+shape = SubResource("RectangleShape2D_on2qe")

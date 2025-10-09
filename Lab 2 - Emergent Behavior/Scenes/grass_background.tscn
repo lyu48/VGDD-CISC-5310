@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bkreqmlx6msqo"]
+
+[ext_resource type="Texture2D" uid="uid://b7bqx1e3kt1ax" path="res://Assets/grass-background.png" id="1_724fh"]
+
+[node name="Node2D" type="CanvasLayer"]
+
+[node name="GrassBackground" type="Sprite2D" parent="."]
+position = Vector2(964, 545)
+texture = ExtResource("1_724fh")

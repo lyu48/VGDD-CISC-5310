@@ -60,10 +60,10 @@ func _process(_delta: float) -> void:
 	
 	#if timer has started (i.e. start =1) and then paused, display end text
 	if start == 1 and timer.is_paused():
-		end_label.text = "Congrats!\nYour Score = " +str(score)+ "\nYour Time = " +str(timer.wait_time-timer.time_left).pad_decimals(3)
+		end_label.text = "Congrats!\nYour Score: " +str(score)+ "\nYour Time: " +str(timer.wait_time-timer.time_left).pad_decimals(3)
 		end_label.show()
 
 #if player fails to collect all bones before timer runs out, show end label
 func _on_timer_timeout() -> void:
-	end_label.text = "You Failed\nYour Score = " +str(score)
+	end_label.text = "You Failed\nYour Score: " +str(score)
 	end_label.show()

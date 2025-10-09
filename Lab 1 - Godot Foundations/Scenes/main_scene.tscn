@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://6b34kvmua8en"]
+[gd_scene load_steps=37 format=3 uid="uid://6b34kvmua8en"]
 
 [ext_resource type="Script" uid="uid://bo172u486o7ed" path="res://Scripts/game_manager.gd" id="1_6ev3c"]
 [ext_resource type="PackedScene" uid="uid://byrtnruin0av0" path="res://Scenes/sky_background.tscn" id="1_iacmt"]
@@ -36,9 +36,13 @@ tracks/1/keys = {
 "values": [0.0, 0.0, 0.0]
 }
 
+[sub_resource type="Animation" id="Animation_6ev3c"]
+resource_name = "Bob2"
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hq1ik"]
 _data = {
-&"Bob": SubResource("Animation_8mm7a")
+&"Bob": SubResource("Animation_8mm7a"),
+&"Bob2": SubResource("Animation_6ev3c")
 }
 
 [sub_resource type="Animation" id="Animation_nfk4m"]
