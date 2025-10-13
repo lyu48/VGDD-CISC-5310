@@ -7,7 +7,7 @@
 radius = 30.016663
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5qn4e"]
-radius = 96.18732
+radius = 204.0
 
 [node name="Sheep" type="CharacterBody2D"]
 collision_layer = 3
@@ -27,3 +27,11 @@ shape = SubResource("CircleShape2D_aemob")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sight"]
 position = Vector2(-1, 14)
 shape = SubResource("CircleShape2D_5qn4e")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+
+[connection signal="body_entered" from="Sight" to="." method="_on_sight_body_entered"]
+[connection signal="body_exited" from="Sight" to="." method="_on_sight_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

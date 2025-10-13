@@ -1,11 +1,14 @@
-extends Area2D
+extends Node2D
 
 #create variable for Game Manger Node to connect to score variable/score counter function
 @onready var game_manager: Node = %Game_Manager
 
+func _ready() -> void:
+	$AnimationPlayer.seek(randf_range(0,2))
+
 #if body enters the area2D while the timer is still running, disappear the bone, and add one to score
-func _on_body_entered(_body: Node2D) -> void:
-	#checking if timer is still running
+func _on_bone_collectible_body_entered(_body: Node2D) -> void:
+		#checking if timer is still running
 	if game_manager.timer.time_left > 0:
 		#triggered on body entering the area of the bone - collision layer is 1, but mask is two so it 
 		#only detects collisions from bodies on layer 2

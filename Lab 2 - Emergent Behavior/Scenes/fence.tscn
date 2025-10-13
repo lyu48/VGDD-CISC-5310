@@ -6,6 +6,7 @@
 size = Vector2(305, 82)
 
 [node name="Fence" type="StaticBody2D"]
+collision_layer = 3
 
 [node name="Fence Sprite" type="Sprite2D" parent="."]
 position = Vector2(26.35157, 7.249996)
