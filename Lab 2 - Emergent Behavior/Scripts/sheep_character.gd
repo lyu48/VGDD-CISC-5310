@@ -7,7 +7,7 @@ extends CharacterBody2D
 var nearby_sheep = []
 
 #variables for fleeing from the border collie
-@onready var player: CharacterBody2D = %Player
+var player: CharacterBody2D
 @onready var sheep_sprite: Sprite2D = $Sheep_Sprite
 @onready var timer: Timer = $Timer
 var border_collie_near = false
@@ -20,6 +20,7 @@ func _ready() -> void:
 	velocity.x = randf_range(-1.0, 1.0)
 	velocity.y = randf_range(-1.0, 1.0)
 	velocity *= speed
+	print(player.name)
 
 func _physics_process(_delta: float) -> void:
 	if running:
@@ -62,7 +63,7 @@ func _physics_process(_delta: float) -> void:
 
 
 func _on_sight_body_entered(body: Node2D) -> void:
-	if body.name == "Player":
+	if body == player:
 		border_collie_near = true
 		running = true
 		timer.start()

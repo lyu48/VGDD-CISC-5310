@@ -3,6 +3,7 @@ extends Node2D
 #variables to spawn sheep flock
 var num_to_spawn = 25
 var sheep_flock = preload("res://Scenes/sheep_character.tscn")		#loading scene into variable
+@onready var player: CharacterBody2D = $Player
 
 #node variables
 @onready var fence: StaticBody2D = $Fences/Fence
@@ -28,6 +29,7 @@ func _ready() -> void:
 	#looping over the number of sheep to spawn
 	for x in num_to_spawn:
 		var new_sheep = sheep_flock.instantiate()
+		new_sheep.player = player
 		#setting sheep position coordinates
 		new_sheep.position.x = randf_range(10, w-10)
 		new_sheep.position.y = randf_range(10, fence_pos_y-100)
