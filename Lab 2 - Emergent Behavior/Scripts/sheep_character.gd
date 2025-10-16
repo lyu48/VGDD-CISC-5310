@@ -7,7 +7,7 @@ extends CharacterBody2D
 var nearby_sheep = []
 
 #variables for fleeing from the border collie
-@onready var player: CharacterBody2D = %Player
+@onready var player: CharacterBody2D = $/root/Main_Scene/Player
 @onready var sheep_sprite: Sprite2D = $Sheep_Sprite
 @onready var timer: Timer = $Timer
 var border_collie_near = false
@@ -73,7 +73,7 @@ func _on_sight_body_entered(body: Node2D) -> void:
 
 
 func _on_sight_body_exited(body: Node2D) -> void:
-	if body.name == "Player":
+	if body.is_in_group("Player"):
 		border_collie_near = false
 	
 	else:
