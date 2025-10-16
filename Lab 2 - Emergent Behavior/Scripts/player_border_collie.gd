@@ -3,7 +3,8 @@ extends CharacterBody2D
 @onready var border_collie: AnimatedSprite2D = $border_collie
 const speed = 350.0
 
-
+func _ready() -> void:
+	print(name)
 func _process(_delta: float) -> void:
 	#variable to get direction
 	var direction = Input.get_axis("ui_left", "ui_right")

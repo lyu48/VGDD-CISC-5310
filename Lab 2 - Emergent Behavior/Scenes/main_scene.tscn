@@ -77,7 +77,6 @@ horizontal_alignment = 1
 layer = -1
 
 [node name="Player" parent="." instance=ExtResource("2_x6ack")]
-unique_name_in_owner = true
 position = Vector2(414, 437)
 
 [node name="Walls" type="StaticBody2D" parent="."]
